@@ -9,55 +9,36 @@ import java.awt.*;
 
 
 public class MainForm extends JFrame {
-    private int MainForm_width = 800;
-    private int MainForm_height = 600;
-    private CardLayout MyForm = new CardLayout();
-    private JPanel Form1 = new JPanel();
-    private JPanel Form2 = new JPanel();
+    private int MainForm_width = 720;
+    private int MainForm_height = 960;
 
-    private JLabel welcome_page_msg1 = new JLabel("Username");
-    private JLabel welcome_page_msg2 = new JLabel("Password");
-    private JTextField input_username = new JTextField();
-    private JTextField input_password = new JTextField();
-    private JButton welcome_page_submit = new JButton("submit");
-    //widget for welcome_page
-
+    private JPanel Head_Panel = new JPanel();
+    private JPanel Body_Panel = new JPanel();
+    private JPanel Tail_Panel = new JPanel();
+    //set size of three panel in MainForm
     {
-        Form1.setLayout(null);
-        Form1.add(welcome_page_msg1);
-        Form1.add(welcome_page_msg2);
-        Form1.add(input_username);
-        Form1.add(input_password);
-        Form1.add(welcome_page_submit);
-
-
-    }//add the widgets to Form1
-
-
-
+        Head_Panel.setBackground(Color.BLACK);
+        Head_Panel.setBounds(0,0,MainForm_width,70);
+        Body_Panel.setBackground(Color.GRAY);
+        Body_Panel.setBounds(0,0,MainForm_width,MainForm_height-70-60);
+        Tail_Panel.setBackground(Color.GREEN);
+        Tail_Panel.setBounds(0,0,MainForm_width,60);
+    }
 
 
     public MainForm(){
         super("ResumeReader");
-        this.setSize(MainForm_width,MainForm_height);
+        this.setSize(MainForm_width, MainForm_height);
         this.setLocationRelativeTo(null);
-        this.setLayout(MyForm);
-        this.add(Form1);
-        this.add(Form2);
+        this.setLayout(null);
         this.setVisible(true);
+        //set Frame MainForm
+        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        //set how to do when click button close
 
-    }
-    public MainForm(int w,int h){
-        super("ResumeReader");
-        MainForm_width = w;
-        MainForm_height = h;
-        this.setSize(MainForm_width,MainForm_height);
-        this.setLocationRelativeTo(null);
-        this.setLayout(MyForm);
-        this.add(Form1);
-        this.add(Form2);
-        this.setVisible(true);
-
+        this.add(Head_Panel);
+        this.add(Body_Panel);
+        this.add(Tail_Panel);
     }
 
 }
