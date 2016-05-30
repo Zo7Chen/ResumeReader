@@ -21,9 +21,9 @@ public class MainForm extends JFrame {
         Head_Panel.setBackground(Color.GREEN);
         Head_Panel.setBounds(0,0,MainForm_width,70);
         Body_Panel.setBackground(Color.GRAY);
-        Body_Panel.setBounds(0,0,MainForm_width,MainForm_height-70-60);
+        Body_Panel.setBounds(0,70,MainForm_width,785);
         Tail_Panel.setBackground(Color.GREEN);
-        Tail_Panel.setBounds(0,0,MainForm_width,60);
+        Tail_Panel.setBounds(0,70+785,MainForm_width,70);
     }
 
     //widget in Head_Panel
@@ -41,8 +41,42 @@ public class MainForm extends JFrame {
     }
 
     //widget in Body_Panel
-    {
+    private JLabel Label_name = new JLabel("姓名");
+    private JTextField TextField_name = new JTextField();
+    private JLabel Label_sex = new JLabel("性别");
+    private ButtonGroup ButtonGroup_sex = new ButtonGroup();
+    private JRadioButton Sex_male = new JRadioButton("男",true);
+    private JRadioButton Sex_female = new JRadioButton("女",false);
+    private JLabel Label_NativePlace = new JLabel("籍贯");
+    private JTextField TextField_NativePlace = new JTextField();
 
+    //widget in body panel
+    {
+        Body_Panel.setLayout(null);
+        Body_Panel.add(Label_name);
+        Body_Panel.add(TextField_name);
+        Body_Panel.add(Label_sex);
+        Body_Panel.add(Sex_male);
+        Body_Panel.add(Sex_female);
+        Body_Panel.add(Label_NativePlace);
+        Body_Panel.add(TextField_NativePlace);
+
+        Label_name.setBounds(20,20,40,30);
+        Label_name.setFont(new Font("宋体",Font.PLAIN,18));
+        TextField_name.setBounds(60,20,80,30);
+        TextField_name.setFont(new Font("宋体",Font.PLAIN,18));
+        Label_sex.setBounds(160,20,40,30);
+        Label_sex.setFont(new Font("宋体",Font.PLAIN,18));
+        ButtonGroup_sex.add(Sex_male);
+        ButtonGroup_sex.add(Sex_female);
+        Sex_male.setBounds(200,20,50,30);
+        Sex_male.setFont(new Font("宋体",Font.PLAIN,18));
+        Sex_female.setBounds(250,20,50,30);
+        Sex_female.setFont(new Font("宋体",Font.PLAIN,18));
+        Label_NativePlace.setBounds(320,20,40,30);
+        Label_NativePlace.setFont(new Font("宋体",Font.PLAIN,18));
+        TextField_NativePlace.setBounds(360,20,80,30);
+        TextField_NativePlace.setFont(new Font("宋体",Font.PLAIN,18));
     }
 
 
