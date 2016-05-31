@@ -49,8 +49,11 @@ public class MainForm extends JFrame {
     private JRadioButton Sex_female = new JRadioButton("女",false);
     private JLabel Label_NativePlace = new JLabel("籍贯");
     private JTextField TextField_NativePlace = new JTextField();
-
-    //widget in body panel
+    private JLabel Label_BirthYear = new JLabel("出生年份");
+    private JComboBox ComboBox_BirthYear = new JComboBox();
+    private JLabel Label_GraduateSchool = new JLabel("毕业学校");
+    private JTextField TextField_GraduateSchool = new JTextField();
+    private PictureButton Photo = new PictureButton();
     {
         Body_Panel.setLayout(null);
         Body_Panel.add(Label_name);
@@ -60,6 +63,11 @@ public class MainForm extends JFrame {
         Body_Panel.add(Sex_female);
         Body_Panel.add(Label_NativePlace);
         Body_Panel.add(TextField_NativePlace);
+        Body_Panel.add(Label_BirthYear);
+        Body_Panel.add(ComboBox_BirthYear);
+        Body_Panel.add(Label_GraduateSchool);
+        Body_Panel.add(TextField_GraduateSchool);
+        Body_Panel.add(Photo);
 
         Label_name.setBounds(20,20,40,30);
         Label_name.setFont(new Font("宋体",Font.PLAIN,18));
@@ -77,6 +85,24 @@ public class MainForm extends JFrame {
         Label_NativePlace.setFont(new Font("宋体",Font.PLAIN,18));
         TextField_NativePlace.setBounds(360,20,80,30);
         TextField_NativePlace.setFont(new Font("宋体",Font.PLAIN,18));
+        Label_BirthYear.setBounds(20,70,80,30);
+        Label_BirthYear.setFont(new Font("宋体",Font.PLAIN,18));
+        ComboBox_BirthYear.setBounds(100,70,80,30);
+        ComboBox_BirthYear.setFont(new Font("宋体",Font.PLAIN,18));
+        {
+            int i = 1950;
+            for ( ;i <= 2016;++i){
+                ComboBox_BirthYear.addItem(i);
+            }
+        }
+        Label_GraduateSchool.setBounds(200,70,80,30);
+        Label_GraduateSchool.setFont(new Font("宋体",Font.PLAIN,18));
+        TextField_GraduateSchool.setBounds(300,70,200,30);
+        TextField_GraduateSchool.setFont(new Font("宋体",Font.PLAIN,18));
+        {
+
+        }
+
     }
 
 
